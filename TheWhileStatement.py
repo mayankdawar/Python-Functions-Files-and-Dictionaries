@@ -17,3 +17,18 @@ n = 0
 while (n < len(list1)):
     accum += list1[n]
     n += 1
+
+    
+    
+# Write a function called stop_at_four that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.
+
+def stop_at_four(lst):
+    new_lst = []
+    n = 0
+    while n < len(lst) and lst[n] != 4:
+        new_lst.append(lst[n])
+        n += 1
+    return new_lst
+
+
+  
