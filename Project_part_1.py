@@ -12,15 +12,7 @@ def strip_punctuation(Str):
 
 # Next, copy in your strip_punctuation function and define a function called get_pos which takes one parameter, a string which represents one or more sentences, and calculates how many words in the string are considered positive words. Use the list, positive_words to determine what words will count as positive. The function should return a positive integer - how many occurrences there are of positive words in the text. Note that all of the words in positive_words are lower cased, so you’ll need to convert all the words in the input string to lower case as well.
 
-def get_pos(string):
-    newStr = strip_punctuation(string)
-    lstNewStr = newStr.split()
-    counter = 0
-    for word in lstNewStr:
-        for pointer in positive_words:
-            lowerString = pointer.lower()
-            if word == lowerString:
-                counter += 1punctuation_char = ["'", '"', ",", ".", "!", ":", ";", '#', '@']
+punctuation_char = ["'", '"', ",", ".", "!", ":", ";", '#', '@']
 # list of positive words to use
 positive_words = []
 with open("positive_words.txt") as pos_f:
@@ -39,10 +31,15 @@ def get_pos(string):
     counter = 0
     for word in lstNewStr:
         word = word.lower()
-        for pointer in positive_words:  
+        for pointer in positive_words:
+       #     lowerString = pointer.lower()
+    
             if word == pointer:
                 counter += 1
     return counter
+    
+            
+
     
 
 
