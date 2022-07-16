@@ -48,7 +48,7 @@ for i in lines:
 emotions = []
 with open ("emotion_words.txt","r") as obj:
     
-    for i in lines:
+    for i in obj: #removed lines as lines was not defined
         a = i.split()
         emotions.append(a[0])  
         
